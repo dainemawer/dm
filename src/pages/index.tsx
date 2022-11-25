@@ -25,6 +25,8 @@ export default function Home({ articles }: PostsProps): JSX.Element {
 	const latest = articles[0];
 	const recent = articles.slice(1, 4);
 
+	console.log(articles);
+
 	return (
 		<Layout>
 			<NextSeo
@@ -43,8 +45,8 @@ export default function Home({ articles }: PostsProps): JSX.Element {
 
 			<section>
 				<header>Recent</header>
-				{recent.map((article) => (
-					<article key={article.id}>
+				{recent.map((article,index) => (
+					<article key={index}>
 						<figure></figure>
 						<div>
 							<h2>{article.title}</h2>
@@ -60,6 +62,8 @@ export default function Home({ articles }: PostsProps): JSX.Element {
 export const getServerSideProps = async () => {
 	const params = ['title', 'description', 'slug']
 	const articles = getDocuments('articles', params)
+
+	console.log(getDocuments('pages'));
 
 	return {
 		props: { articles }

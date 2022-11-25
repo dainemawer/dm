@@ -52,7 +52,7 @@ export default function Post({ post }: Post) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-	const post = getDocumentBySlug('posts', params.slug, [
+	const post = getDocumentBySlug('articles', params.slug, [
 		'title',
 		'publishedAt',
 		'slug',
@@ -75,7 +75,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
-		paths: getDocumentPaths('posts'),
+		paths: getDocumentPaths('articles'),
 		fallback: false
 	}
 }
