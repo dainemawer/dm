@@ -9,12 +9,19 @@
 */
 
 import { Html, Head, Main, NextScript } from 'next/document'
-import { GoogleAnalytics } from '@lib/gtag/analytics'
 
 export default function Document(): JSX.Element {
 	return (
 		<Html lang="en">
-			<Head />
+			<Head>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossOrigin="true"
+				/>
+				<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+			</Head>
 			<body className="site-name">
 				<Main />
 				<NextScript />
