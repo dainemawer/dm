@@ -12,14 +12,8 @@ import { NextSeo } from 'next-seo';
 import { getDocuments } from 'outstatic/server'
 
 interface PostsProps {
-	posts: {
+	articles: {
 		description: string
-		title: string
-		slug: string
-		publishedAt: string
-		status: string
-	}[],
-	pages: {
 		title: string
 		slug: string
 		publishedAt: string
@@ -27,9 +21,9 @@ interface PostsProps {
 	}[]
 }
 
-export default function Home({ posts, pages }: PostsProps): JSX.Element {
-	const latest = posts[0];
-	const recent = posts.slice(1, 4);
+export default function Home({ articles }: PostsProps): JSX.Element {
+	const latest = articles[0];
+	const recent = articles.slice(1, 4);
 
 	return (
 		<Layout>
@@ -65,10 +59,9 @@ export default function Home({ posts, pages }: PostsProps): JSX.Element {
 
 export const getServerSideProps = async () => {
 	const params = ['title', 'description', 'slug']
-	const posts = getDocuments('posts', params)
-	const pages = getDocuments('pages', params)
+	const articles = getDocuments('articles', params)
 
 	return {
-		props: { posts, pages }
+		props: { articles }
 	}
 }
