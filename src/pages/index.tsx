@@ -63,7 +63,7 @@ export const getServerSideProps = async () => {
 	const params = ['title', 'description', 'slug']
 	const articles = getDocuments('articles', params)
 
-	console.log(getDocuments('pages'));
+	console.log(articles);
 
 	return {
 		props: { articles }
