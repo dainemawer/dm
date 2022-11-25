@@ -1,0 +1,15 @@
+.container {
+	align-items: center;
+	border-top: 3px solid #000;
+	display: flex;
+	justify-content: center;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.colophon {
+	color: #777;
+	font-size: 0.875rem;
+	margin: 0;
+}
