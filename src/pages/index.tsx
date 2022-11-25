@@ -7,11 +7,13 @@
 */
 
 import Link from 'next/link'
+import Layout from '@components/Layout'
 import { NextSeo } from 'next-seo';
 import { getDocuments } from 'outstatic/server'
 
 interface PostsProps {
 	posts: {
+		description: string
 		title: string
 		slug: string
 		publishedAt: string
@@ -26,38 +28,43 @@ interface PostsProps {
 }
 
 export default function Home({ posts, pages }: PostsProps): JSX.Element {
+	const latest = posts[0];
+	const recent = posts.slice(1, 4);
+
 	return (
-		<>
+		<Layout>
 			<NextSeo
 				title="Home"
 			/>
-			<h1>Home</h1>
-			<h3>Posts</h3>
-			{posts && posts.length > 0 && (
-				<ul>
-					{posts.map((post) => (
-						<li key={post.slug}>
-							<Link href={`/posts/${post.slug}`}>{post.title}</Link>
-						</li>
-					))}
-				</ul>
-			)}
-			<h3>Pages</h3>
-			{pages && pages.length > 0 && (
-				<ul>
-					{pages.map((page) => (
-						<li key={page.slug}>
-							<Link href={page.slug}>{page.title}</Link>
-						</li>
-					))}
-				</ul>
-			)}
-		</>
+			<section>
+				<header>Latest</header>
+				<article>
+					<figure></figure>
+					<div>
+						<h2>{latest?.title}</h2>
+						<p>{latest?.description}</p>
+					</div>
+				</article>
+			</section>
+
+			<section>
+				<header>Recent</header>
+				{recent.map((article) => (
+					<article key={article.id}>
+						<figure></figure>
+						<div>
+							<h2>{article.title}</h2>
+							<p>{article.description}</p>
+						</div>
+					</article>
+				))}
+			</section>
+		</Layout>
 	)
 }
 
 export const getServerSideProps = async () => {
-	const params = ['title', 'slug']
+	const params = ['title', 'description', 'slug']
 	const posts = getDocuments('posts', params)
 	const pages = getDocuments('pages', params)
 

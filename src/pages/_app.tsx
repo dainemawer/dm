@@ -12,7 +12,6 @@ import type { AppProps, NextWebVitalsMetric } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { DefaultSeo } from 'next-seo';
-import Layout from '@components/Layout'
 import ErrorBoundary from '@components/ErrorBoundary'
 import 'tailwindcss/tailwind.css'
 import { sendPageView } from '@lib/gtag'
@@ -20,6 +19,7 @@ import { GoogleAnalytics, sendToAnalytics } from '@lib/gtag/analytics';
 import { SiteContext, store } from '@context/SiteContext';
 
 import SEO from '../next-seo.config';
+import '@styles/global.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter()
@@ -40,13 +40,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<SiteContext.Provider value={store}>
-			<Layout>
-				<ErrorBoundary>
-					<DefaultSeo {...SEO} />
-					<GoogleAnalytics />
-					<Component {...pageProps} />
-				</ErrorBoundary>
-			</Layout>
+			<ErrorBoundary>
+				<DefaultSeo {...SEO} />
+				<GoogleAnalytics />
+				<Component {...pageProps} />
+			</ErrorBoundary>
 		</SiteContext.Provider>
 	)
 }
