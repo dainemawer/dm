@@ -1,6 +1,6 @@
 ---
 title: 'CSS Modules for Scalability'
-status: 'draft'
+status: 'published'
 author:
   name: 'Daine Mawer'
   picture: 'https://avatars.githubusercontent.com/u/48082535?v=4'
