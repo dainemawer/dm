@@ -1,35 +1,38 @@
 .card {
-	display: flex;
-	margin: 0 auto 48px auto;
-	max-width: 768px;
+	margin: 0 auto 3rem auto;
+	max-width: 48rem;
 
 	&.lead {
 		margin-bottom: 0;
 
 		& .title {
-			font-size: 61px;
+			font-size: 3rem;
+
+			@media (min-width: 768px) {
+				font-size: 4rem;
+			}
 		}
 
 		& .date {
-			font-size: 14px;
+			font-size: 0.875rem;
 		}
 	}
 }
 
 .title {
-	font-family: 'DM Serif Display', serif;
-	font-size: 32px;
-	margin: 14px 0 18px 0;
+	font-family: var(--heading-font);
+	font-size: 2rem;
+	margin: 0.875rem 0 1.125rem 0;
 }
 
 .date {
-	color: #979797;
-	font-size: 12px;
-	padding-left: 64px;
+	color: var(--color-gray);
+	font-size: 0.75rem;
+	padding-left: 4rem;
 	position: relative;
 
 	&::before {
-		background: #000;
+		background: var(--color-black);
 		content: '';
 		display: block;
 		height: 3px;
@@ -37,18 +40,22 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		width: 53px;
+		width: 3.312rem;
 	}
 }
 
 .anchor {
-	color: #000;
+	color: var(--color-black);
 	text-decoration: none;
 }
 
 .description {
-	color: #979797;
-	font-size: 16px;
+	color: var(--color-gray);
+	font-size: 0.875rem;
 	line-height: 1.5;
 	margin: 0;
+
+	@media (min-width: 768px) {
+		font-size: 1rem;
+	}
 }
