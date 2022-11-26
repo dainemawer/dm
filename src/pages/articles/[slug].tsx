@@ -7,7 +7,7 @@ import Layout from '@components/Layout'
 import { formatDate } from '@util/date'
 import Link from 'next/link'
 
-import styles from './Article.module.css'
+import styles from '@styles/Article.module.css';
 
 interface Post {
 	post: {
