@@ -1,10 +1,15 @@
 import styles from './Section.module.css'
 
-export const Section = ({ children, title }) => {
+interface SectionProps {
+	children: React.ReactNode
+	title?: string
+}
+
+export const Section = ({ children, title }: SectionProps) => {
 	return (
-		<section className={styles.section}>
+		<section aria-label={title} className={styles.section}>
 			{title && (<header className={styles.header}>
-				<h3 className={styles.title}>{title}</h3>
+				<h2 className={styles.title}>{title}</h2>
 			</header>)}
 			{children}
 		</section>
