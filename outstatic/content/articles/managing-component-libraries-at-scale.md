@@ -5,7 +5,7 @@ author:
   name: 'Daine Mawer'
   picture: 'https://avatars.githubusercontent.com/u/48082535?v=4'
 slug: 'managing-component-libraries-at-scale'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu scelerisque felis imperdiet proin fermentum.'
+description: 'All of this text is editable. Simply click anywhere in the paragraph or heading text and start typing. All of this text is editable. Simply click anywhere in the paragraph or heading text and start typing. All of this text is editable. Simply click anywhere in the paragraph or heading text and start typing. '
 coverImage: '/images/absurd.design---chapter-1---33-AzOD.png'
 publishedAt: '2022-11-25T04:29:46.965Z'
 ---
