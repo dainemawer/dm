@@ -12,6 +12,8 @@ import { NextSeo } from 'next-seo';
 import { getDocumentBySlug } from 'outstatic/server'
 import convertToHTML from '@util/remark'
 
+import styles from '@styles/Article.module.css';
+
 export default function About({ page }): JSX.Element {
 	return (
 		<Layout>
@@ -19,7 +21,7 @@ export default function About({ page }): JSX.Element {
 				title="About"
 			/>
 			<Section title="About">
-				<div dangerouslySetInnerHTML={{ __html: page.content }} />
+				<div className={styles.content} dangerouslySetInnerHTML={{ __html: page }} />
 			</Section>
 		</Layout>
 	)

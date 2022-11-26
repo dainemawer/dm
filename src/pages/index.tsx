@@ -37,7 +37,7 @@ export default function Home({ articles }: PostsProps): JSX.Element {
 			</Section>
 			<Section title="Recent">
 				{recent.map((article) => (
-					<Card key={article.slug} date={article.publishedAt} title={article.title} description={article.description} slug={slug} />
+					<Card key={article.slug} date={article.publishedAt} title={article.title} description={article.description} slug={article.slug} />
 				))}
 			</Section>
 		</Layout>
