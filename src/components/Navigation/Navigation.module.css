@@ -1,7 +1,7 @@
 .list {
 	display: flex;
 	list-style: none;
-	margin: 14px 0 0 0;
+	margin: 0.875rem 0 0 0;
 	padding: 0;
 }
 
@@ -17,10 +17,10 @@
 
 	&:hover,
 	&:focus {
-		color: #000;
+		color: var(--color-black);
 	}
 }
 
 .active {
-	color: #000;
+	color: var(--color-black);
 }
