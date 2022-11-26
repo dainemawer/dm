@@ -12,6 +12,13 @@ publishedAt: '2022-11-26T06:03:45.600Z'
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu scelerisque felis imperdiet proin fermentum. Ante metus dictum at tempor commodo. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Sit amet facilisis magna etiam tempor orci eu. Egestas congue quisque egestas diam in arcu cursus. Et tortor at risus viverra adipiscing at in tellus integer. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Pellentesque eu tincidunt tortor aliquam nulla. Posuere lorem ipsum dolor sit amet. Sapien faucibus et molestie ac. Sed enim ut sem viverra. Fusce ut placerat orci nulla pellentesque. Vitae aliquet nec ullamcorper sit amet risus nullam eget felis. Sodales ut etiam sit amet nisl purus in. Cursus turpis massa tincidunt dui ut ornare lectus. Integer eget aliquet nibh praesent tristique magna sit amet. Aliquet sagittis id consectetur purus. Nunc mattis enim ut tellus elementum sagittis.
 
+```javascript
+function getData() {
+ var data = fetch(url);
+ return data;
+}
+```
+
 Potenti nullam ac tortor vitae. Adipiscing diam donec adipiscing tristique risus nec feugiat. Accumsan tortor posuere ac ut consequat semper viverra. Potenti nullam ac tortor vitae purus. Cras tincidunt lobortis feugiat vivamus. Tempor nec feugiat nisl pretium fusce id velit ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Vulputate eu scelerisque felis imperdiet proin. Erat imperdiet sed euismod nisi. Varius morbi enim nunc faucibus a pellentesque sit. Sed vulputate odio ut enim. Neque viverra justo nec ultrices dui sapien eget. Quam adipiscing vitae proin sagittis.
 
 Rhoncus mattis rhoncus urna neque viverra. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Iaculis nunc sed augue lacus. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Eget nullam non nisi est. Non blandit massa enim nec dui nunc. Diam ut venenatis tellus in metus vulputate eu. Elementum sagittis vitae et leo. Aenean euismod elementum nisi quis eleifend. In hac habitasse platea dictumst quisque sagittis purus. Diam in arcu cursus euismod quis. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Est placerat in egestas erat imperdiet sed euismod nisi. Volutpat odio facilisis mauris sit amet. A scelerisque purus semper eget duis at tellus. Non nisi est sit amet facilisis magna etiam tempor.
