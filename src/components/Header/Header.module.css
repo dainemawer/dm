@@ -1,9 +1,12 @@
-.container {
+.header {
 	align-items: center;
-	border-bottom: 3px solid #000;
 	display: flex;
-	justify-content: space-between;
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 20px 0;
+	flex-direction: column;
+	justify-content: center;
+	padding: 55px 0;
+}
+
+.image {
+	border-radius: 50%;
+	margin-bottom: 16px;
 }

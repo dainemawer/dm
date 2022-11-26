@@ -1,0 +1,54 @@
+.card {
+	display: flex;
+	margin: 0 auto 48px auto;
+	max-width: 768px;
+
+	&.lead {
+		margin-bottom: 0;
+
+		& .title {
+			font-size: 61px;
+		}
+
+		& .date {
+			font-size: 14px;
+		}
+	}
+}
+
+.title {
+	font-family: 'DM Serif Display', serif;
+	font-size: 32px;
+	margin: 14px 0 18px 0;
+}
+
+.date {
+	color: #979797;
+	font-size: 12px;
+	padding-left: 64px;
+	position: relative;
+
+	&::before {
+		background: #000;
+		content: '';
+		display: block;
+		height: 3px;
+		left: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 53px;
+	}
+}
+
+.anchor {
+	color: #000;
+	text-decoration: none;
+}
+
+.description {
+	color: #979797;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+}
