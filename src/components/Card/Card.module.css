@@ -1,9 +1,12 @@
 .card {
-	margin: 0 auto 3rem auto;
 	max-width: 48rem;
 
+	&:not(:last-child) {
+		margin: 0 auto 3rem auto;
+	}
+
 	&.lead {
-		margin-bottom: 0;
+		margin-bottom: 3rem;
 
 		& .title {
 			font-size: 3rem;
@@ -46,7 +49,14 @@
 
 .anchor {
 	color: var(--color-black);
+	outline: 0;
 	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+
+	&:hover,
+	&:focus {
+		color: var(--hover-color);
+	}
 }
 
 .description {
