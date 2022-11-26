@@ -4,13 +4,13 @@
 	--color-black: #000;
 	--color-white: #fff;
 	--color-gray: #979797;
+	--hover-color: #D36969;
 	--heading-font: 'DM Serif Display', serif;
 	--body-font: 'DM Sans', sans-serif;
 }
 
 body {
-	font-family: 'DM Sans', sans-serif;
-	padding: 0 20px;
+	font-family: var(--body-font);
 }
 
 .sr-only {
