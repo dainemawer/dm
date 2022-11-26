@@ -18,6 +18,7 @@
 	&:hover,
 	&:focus {
 		color: var(--color-black);
+		outline: 0;
 	}
 }
 
