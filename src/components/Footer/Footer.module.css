@@ -4,12 +4,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	max-width: 760px;
 	margin: 0 auto;
-	padding: 20px 0;
+	max-width: 48rem;
+	padding: 1.25rem 0;
 }
 
 .colophon {
-	color: #979797;
+	color: var(--color-gray);
+	font-size: 0.875rem;
 	margin: 0;
 }
