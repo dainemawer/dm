@@ -3,10 +3,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 55px 0;
+	padding: 3.437rem 0;
 }
 
 .image {
 	border-radius: 50%;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 }
