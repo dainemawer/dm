@@ -12,13 +12,13 @@
 
 .content {
 
-	& p {
+	& > p {
 		color: var(--color-gray);
 		font-size: 1.125rem;
 		line-height: 1.5;
 	}
 
-	& p:first-child {
+	& > p:first-child {
 		font-size: 1.5rem;
 	}
 }
