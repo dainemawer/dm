@@ -6,8 +6,16 @@ import ErrorPage from 'next/error'
 import Layout from '@components/Layout'
 import { formatDate } from '@util/date'
 import Link from 'next/link'
+import { useEffect } from 'react'
+import Prism from 'prismjs'
+import SocialShare from '@components/SocialShare'
+import { NextSeo } from 'next-seo';
 
 import styles from '@styles/Article.module.css';
+import "prismjs/themes/prism-tomorrow.css";
+import 'prismjs/components/prism-css'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-javascript'
 
 interface Post {
 	post: {
@@ -36,12 +44,22 @@ interface Params {
 export default function Post({ post }: Post) {
 	const router = useRouter()
 
+	useEffect(() => {
+		const highlight = async () => {
+			await Prism.highlightAll();
+		};
+		highlight();
+	})
+
 	if (!router.isFallback && !post?.slug) {
 		return <ErrorPage statusCode={404} />
 	}
 
 	return (
 		<Layout>
+			<NextSeo
+				title={post.title}
+			/>
 			<article className={styles.article}>
 				<ul className={styles.breadcrumbs}>
 					<li><Link href="/">Home</Link></li>
@@ -52,11 +70,7 @@ export default function Post({ post }: Post) {
 				<ul className={styles.list}>
 					<li className={styles.item}>{formatDate(post.publishedAt)}</li>
 					<li className={styles.item}>
-						<ul className={styles.social}>
-							<li>Facebook</li>
-							<li>Twitter</li>
-							<li>LinkedIn</li>
-						</ul>
+						<SocialShare title={post.title} url={post.slug} description={post.description} />
 					</li>
 				</ul>
 				<div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -74,6 +88,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
 		'slug',
 		'author',
 		'content',
+		'description',
 		'coverImage'
 	])
 

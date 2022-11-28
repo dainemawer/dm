@@ -11,6 +11,21 @@
 }
 
 .content {
+	margin-top: 2rem;
+
+	& > h2 {
+		font-family: 'DM Serif Display', serif;
+		font-size: 2.5rem;
+		line-height: 1.2;
+		margin: 0 0 1.5rem 0;
+	}
+
+	& > h3 {
+		font-family: 'DM Serif Display', serif;
+		font-size: 2rem;
+		line-height: 1.2;
+		margin: 0 0 1.5rem 0;
+	}
 
 	& > p {
 		color: var(--color-gray);
@@ -20,6 +35,17 @@
 
 	& > p:first-child {
 		font-size: 1.5rem;
+		margin-top: 0;
+	}
+
+	& > ul {
+		list-style-type: disc;
+		padding-left: 2.5rem;
+	}
+
+	& > blockquote {
+		border-left: 3px solid var(--color-black);
+		padding-left: 1.5rem;
 	}
 }
 
@@ -28,7 +54,6 @@
 	border-bottom: 2px solid #000;
 	display: flex;
 	justify-content: space-between;
-	list-style: none;
 	padding: 1.125rem 0;
 }
 
@@ -41,8 +66,7 @@
 	color: var(--color-gray);
 	display: flex;
 	font-size: 0.875rem;
-	list-style: none;
-	padding: 0;
+	margin-bottom: 1rem;
 }
 
 .breadcrumbs a {
@@ -63,18 +87,5 @@
 	&::before {
 		content: '>';
 		margin: 0 0.625rem;
-	}
-}
-
-.social {
-	display: flex;
-	list-style: none;
-
-	& > * + * {
-
-		&::before {
-			content: '|';
-			margin: 0 0.625rem;
-		}
 	}
 }

@@ -1,8 +1,6 @@
 .list {
 	display: flex;
-	list-style: none;
 	margin: 0.875rem 0 0 0;
-	padding: 0;
 }
 
 .list > * + * {
@@ -10,7 +8,7 @@
 }
 
 .link {
-	color: #777;
+	color: var(--color-gray);
 	font-size: 0.875rem;
 	text-decoration: none;
 	transition: color 0.2s ease;

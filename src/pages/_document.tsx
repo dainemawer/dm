@@ -20,7 +20,7 @@ export default function Document(): JSX.Element {
 					href="https://fonts.gstatic.com"
 					crossOrigin="true"
 				/>
-				<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+				<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 			</Head>
 			<body className="site-name">
 				<Main />

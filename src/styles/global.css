@@ -3,8 +3,9 @@
 :root {
 	--color-black: #000;
 	--color-white: #fff;
-	--color-gray: #979797;
+	--color-gray: #676767;
 	--hover-color: #D36969;
+	--color-red: #d04747;
 	--heading-font: 'DM Serif Display', serif;
 	--body-font: 'DM Sans', sans-serif;
 }

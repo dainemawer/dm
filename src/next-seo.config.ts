@@ -8,10 +8,10 @@ const SITE_IMAGE = '/opengraph.png';
 
 const config: DefaultSeoProps = {
 	title: SITE_TITLE,
-	defaultTitle: 'My Awesome Website',
+	defaultTitle: 'Daine Mawer',
 	description: SITE_DESCRIPTION,
 	themeColor: '#000000',
-	titleTemplate: '%s | Site Name',
+	titleTemplate: '%s | Daine Mawer',
 	additionalLinkTags: [
 		{
 			rel: 'icon',
